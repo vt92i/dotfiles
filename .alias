@@ -1,0 +1,6 @@
+alias l="exa -lh --group-directories-first"
+alias ll="exa -lah --group-directories-first"
+ 
+alias cat="bat"
+
+alias find="fd"
