@@ -1,0 +1,4 @@
+alias cat="bat"
+alias ls="exa"
+alias l="exa -l -s type -h"
+alias ll="exa -la -s type -h"
