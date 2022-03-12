@@ -1,0 +1,148 @@
+## i3 config file (v4)
+
+## Default mod button
+set $defaultmod Mod4
+
+## Font
+font pango:Noto Sans Regular 9
+
+## Autostart
+exec_always --no-startup-id picom --experimental-backends -b --config .config/picom/picom.conf
+exec_always --no-startup-id feh --bg-fill Pictures/wp2.jpg
+exec_always --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
+
+## Keybindings
+# Backlight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# Media player
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+
+# Screenshot
+bindsym Print exec scrot -q 100
+
+# Sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+
+# Floating modifier
+floating_modifier Mod4
+
+# Rofi
+bindsym Mod1+F2 exec rofi -show drun
+bindsym Mod1+Tab exec rofi -show window
+
+# Launch apps
+bindsym Ctrl+Mod1+Return exec kitty
+bindsym Mod4+F exec firefox
+bindsym Mod4+C exec flatpak run org.chromium.Chromium
+bindsym Mod4+E exec nautilus
+bindsym Mod4+S exec flatpak run com.spotify.Client
+bindsym Mod4+V exec code-oss
+bindsym Mod4+A exec atom
+
+# Fullscreen
+bindsym Mod1+Return fullscreen toggle
+
+# Toggle tiling / floating
+bindsym --whole-window Mod4+button3 floating toggle
+
+# Kill focused window
+bindsym Mod1+Q kill
+
+# Control focus only with keyboard
+focus_follows_mouse no
+
+# Change focus
+bindsym Mod1+Left focus left
+bindsym Mod1+Down focus down
+bindsym Mod1+Up focus up
+bindsym Mod1+Right focus right
+
+# Move focused window
+bindsym Mod1+Shift+Left move left
+bindsym Mod1+Shift+Down move down
+bindsym Mod1+Shift+Up move up
+bindsym Mod1+Shift+Right move right
+
+# Switch to workspace
+bindsym Mod4+1 workspace " Workspace 1"
+bindsym Mod4+2 workspace " Workspace 2"
+bindsym Mod4+3 workspace " Workspace 3"
+bindsym Mod4+4 workspace " Workspace 4"
+
+bindsym Ctrl+Mod1+Left workspace prev
+bindsym Ctrl+Mod1+Right workspace next
+
+# Move focused container to workspace
+bindsym Ctrl+Mod1+1 move container to workspace " Workspace 1 "
+bindsym Ctrl+Mod1+2 move container to workspace " Workspace 2 "
+bindsym Ctrl+Mod1+3 move container to workspace " Workspace 3 "
+bindsym Ctrl+Mod1+4 move container to workspace " Workspace 4 "
+
+# Reload configuration file
+bindsym Ctrl+Mod1+c reload
+
+# Restart i3
+bindsym Ctrl+Mod1+r restart
+
+# Logout session
+bindsym Ctrl+Mod1+Delete exec "i3-msg exit"
+
+# Resize window
+mode "resize" {
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod4+r mode "resize"
+
+## i3bar
+bar {
+	i3bar_command i3bar --transparency
+	status_command i3status -c .config/i3/i3status/config 
+	separator_symbol " | "
+	position top	
+	tray_output none
+        colors {
+			background #000000B3
+
+	        statusline #ffffffE6
+        	separator  #ffffffE6
+
+	        focused_workspace  #000000B3 #000000E6 #ffffffE6
+	        active_workspace   #000000B3 #000000B3 #ffffffE6
+	        inactive_workspace #000000B3 #000000B3 #444444E6
+	        urgent_workspace   #000000B3 #000000B3 #ffffffE6
+
+        }
+}
+
+## Styling
+# class                 border   background  text     indicator  child_border
+client.focused          #404552  #404552     #fafafa  #ff5757    #fafafa
+client.focused_inactive #666666  #404552     #eeeeee  #666666    #666666
+client.unfocused        #404552  #484b52     #eeeeee  #ff5757    #404552
+client.urgent           #ff5757  #404552     #ffffff  #555757    #404552
+client.background       #ffffff
+
+## i3-gaps integration
+for_window [class=".*"] border pixel 0
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [title="Preferences$"] floating enable
+
+smart_borders on
+# smart_gaps on
+
+gaps inner 12
+# gaps outer 12

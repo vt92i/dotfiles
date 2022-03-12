@@ -1,0 +1,51 @@
+# i3status configuration file.
+
+general {
+        output_format = i3bar
+	colors = false
+        interval = 1
+}
+
+order += "wireless wlan0"
+order += "cpu_temperature 0"
+order += "memory"
+order += "battery 0"
+order += "volume master"
+order += "tztime date"
+order += "tztime time"
+
+wireless wlan0 {
+        format_up = "  %essid"
+        format_down = "127.0.0.1"
+}
+
+cpu_temperature 0 {
+        format = "  %degrees °C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
+}
+
+memory {
+        format = "  %used"
+}
+
+battery 0 {
+        format = "  %percentage"
+	integer_battery_capacity = true
+	last_full_capacity = true
+}
+
+volume master {
+        format = "  %volume"
+        format_muted = " (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+tztime date {
+        format = "  %d %B %Y"
+}
+
+tztime time {
+        format = "  %l:%M %p "
+}
