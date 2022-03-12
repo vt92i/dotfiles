@@ -4,7 +4,7 @@
 set $defaultmod Mod4
 
 ## Font
-font pango:Noto Sans Regular 9
+font pango:NotoSans Nerd Font Regular 9
 
 ## Autostart
 exec_always --no-startup-id picom --experimental-backends -b --config .config/picom/picom.conf
