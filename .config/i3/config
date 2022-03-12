@@ -70,10 +70,10 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # Switch to workspace
-bindsym Mod4+1 workspace " Workspace 1"
-bindsym Mod4+2 workspace " Workspace 2"
-bindsym Mod4+3 workspace " Workspace 3"
-bindsym Mod4+4 workspace " Workspace 4"
+bindsym Mod4+1 workspace " Workspace 1 "
+bindsym Mod4+2 workspace " Workspace 2 "
+bindsym Mod4+3 workspace " Workspace 3 "
+bindsym Mod4+4 workspace " Workspace 4 "
 
 bindsym Ctrl+Mod1+Left workspace prev
 bindsym Ctrl+Mod1+Right workspace next
