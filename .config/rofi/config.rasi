@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name} {icon}";
-  window-format: "{w} | {c}";
+  window-format: "{w} | {t}";
   show-icons: true;
   font: "Noto Sans Regular 9";
   modi: [drun,window];
