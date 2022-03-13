@@ -1,6 +1,8 @@
 set number
 set mouse=a
 
+set encoding=utf8
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
