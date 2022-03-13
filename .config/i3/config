@@ -95,13 +95,13 @@ bindsym Ctrl+Mod1+Delete exec "i3-msg exit"
 
 # Resize window
 mode "resize" {
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+		bindsym Left        resize shrink width 10 px or 10 ppt
+		bindsym Down        resize grow height 10 px or 10 ppt
+		bindsym Up          resize shrink height 10 px or 10 ppt
+		bindsym Right       resize grow width 10 px or 10 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 
 bindsym Mod4+r mode "resize"
@@ -116,18 +116,18 @@ bar {
 
 	strip_workspace_numbers yes
 
-        colors {
-		background #000000B3
+		colors {
+			background #000000B3
 
-	        statusline #ffffffE6
-        	separator  #ffffffE6
+			statusline #ffffffE6
+			separator  #ffffffE6
 
-	        focused_workspace  #000000B3 #000000E6 #ffffffE6
-	        active_workspace   #000000B3 #000000B3 #ffffffE6
-	        inactive_workspace #000000B3 #000000B3 #444444E6
-	        urgent_workspace   #000000B3 #000000B3 #ffffffE6
+			focused_workspace  #000000B3 #000000E6 #ffffffE6
+			active_workspace   #000000B3 #000000B3 #ffffffE6
+			inactive_workspace #000000B3 #000000B3 #444444E6
+			urgent_workspace   #000000B3 #000000B3 #ffffffE6
 
-        }
+		}
 }
 
 ## Styling

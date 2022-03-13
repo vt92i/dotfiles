@@ -1,77 +1,77 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  drun-display-format: "{name} {icon}";
-  window-format: "{w} | {t}";
-  show-icons: true;
-  font: "Noto Sans Regular 9";
-  modi: [drun,window];
+	display-drun: "Applications:";
+	display-window: "Windows:";
+	drun-display-format: "{name} {icon}";
+	window-format: "{w} | {t}";
+	show-icons: true;
+	font: "Noto Sans Regular 9";
+	modi: [drun,window];
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #0000001A;
-  fg: #FFFFFFFF;
+	bg: #0000001A;
+	fg: #FFFFFFFF;
 
-  background-color: @bg;
-  
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+	background-color: @bg;
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+	spacing: 0;
 }
 
 window {
-  width: 30%;
+	width: 30%;
 }
 
 element {
-  background-color: @bg;
-  padding: 0;
-  text-color: @fg;
+	background-color: @bg;
+	padding: 0;
+	text-color: @fg;
 }
 
 element selected {
-  text-color: @fg;
-  background-color: #00000073;
+	text-color: @fg;
+	background-color: #00000073;
 }
 
 element-text {
-  text-color: @fg;
-  vertical-align: 0.5;
+	text-color: @fg;
+	vertical-align: 0.5;
 }
 
 element-icon {
-  size: 30;
-  padding: 10;
+	size: 30;
+	padding: 10;
 }
 
 entry {
-  background-color: @bg;
-  padding: 12;
-  text-color: @fg;
+	background-color: @bg;
+	padding: 12;
+	text-color: @fg;
 }
 
 inputbar {
-  children: [prompt, entry];
+	children: [prompt, entry];
 }
 
 listview {
-  padding: 0;
-  background-color: @bg;
-  columns: 1;
-  lines: 8;
+	padding: 0;
+	background-color: @bg;
+	columns: 1;
+	lines: 8;
 }
 
 mainbox {
-  background-color: @bg;
-  children: [inputbar, listview];
+	background-color: @bg;
+	children: [inputbar, listview];
 }
 
 prompt {
-  background-color: @bg;
-  enabled: true;
-  padding: 12 0 0 12;
-  text-color: @fg;
+	background-color: @bg;
+	enabled: true;
+	padding: 12 0 0 12;
+	text-color: @fg;
 }
