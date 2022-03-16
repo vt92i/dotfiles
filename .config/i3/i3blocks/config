@@ -9,10 +9,11 @@ markup=none
 [spotify]
 label= 
 command=.config/i3/scripts/spotify.sh
-interval=1
+interval=5
 
 [memory]
-label=RAM: 
+label=RAM:
+command=free -m | grep Mem | awk '{print $3 " MiB"}'
 interval=1
 
 [wifi]
@@ -22,14 +23,19 @@ interval=1
 
 [battery]
 label= 
+command=acpi -b | grep 'Battery 0' | awk {' printf $4 "\n" '}
 instance=0
-interval=5
+interval=1
+
+[microphone]
+label= 
+command=amixer get Capture | tail -n 1 | awk '{print $(NF-1)}' | tr -d '[]'
+interval=1
 
 [volume]
 label= 
-instance=Master
-interval=repeat
-signal=1
+command=amixer get Master | tail -n 1 | awk '{print $(NF-1)}' | tr -d '[]'
+interval=1
 
 [date]
 label=
