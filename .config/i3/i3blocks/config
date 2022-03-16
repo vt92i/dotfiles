@@ -1,0 +1,42 @@
+# i3blocks config file
+
+# Global properties
+command=/usr/lib64/libexec//i3blocks/$BLOCK_NAME
+color=#FFFFFF
+separator_block_width=20
+markup=none
+
+[spotify]
+label= 
+command=.config/i3/scripts/spotify.sh
+interval=1
+
+[memory]
+label=RAM: 
+interval=1
+
+[wifi]
+command=if [[ "`iwgetid -r`" != "" ]]; then echo "  `iwgetid -r`"; else echo "127.0.0.1"; fi
+instance=wlan0
+interval=1
+
+[battery]
+label= 
+instance=0
+interval=5
+
+[volume]
+label= 
+instance=Master
+interval=repeat
+signal=1
+
+[date]
+label=
+command=date '+%d %B %Y'
+interval=5
+
+[time]
+label=
+command=date '+%l:%M %p  '
+interval=5
