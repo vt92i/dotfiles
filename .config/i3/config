@@ -109,7 +109,8 @@ bindsym Mod4+r mode "resize"
 ## i3bar
 bar {
 	i3bar_command i3bar --transparency
-	status_command i3status -c .config/i3/i3status/config 
+	#status_command i3status -c .config/i3/i3status/config
+	status_command i3blocks -c .config/i3/i3blocks/config
 	separator_symbol " | "
 	position top	
 	tray_output none
