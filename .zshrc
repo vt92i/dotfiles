@@ -21,6 +21,7 @@ autoload bashcompinit && bashcompinit
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 
+bindkey  -M emacs  "^[[3~"    delete-char
 bindkey  -M emacs  "^[[3;5~"  kill-word
 bindkey  -M emacs  "^[^?"     backward-kill-word
 
