@@ -27,3 +27,7 @@ bindkey  -M emacs  "^[^?"     backward-kill-word
 
 # Aliases
 source ~/.aliases
+
+# pfetch configuration
+export PF_INFO="ascii title os kernel uptime pkgs memory palette"
+export PF_ASCII="arch"
