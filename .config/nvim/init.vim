@@ -2,6 +2,8 @@ set number
 set mouse=a
 
 set encoding=utf8
+set tabstop=4
+set shiftwidth=4
 
 call plug#begin('~/.vim/plugged')
 
