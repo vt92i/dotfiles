@@ -7,7 +7,7 @@ set $defaultmod Mod4
 font pango:NotoSans Nerd Font Regular 9
 
 ## Autostart
-exec_always --no-startup-id picom --experimental-backends -b --config .config/picom/picom.conf
+exec_always --no-startup-id pkill picom; picom --experimental-backends -b --config .config/picom/picom.conf
 exec_always --no-startup-id feh --bg-fill Pictures/wp2.jpg
 exec_always --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
 
@@ -38,7 +38,7 @@ bindsym Mod1+Tab exec rofi -show window
 
 # Launch apps
 bindsym Ctrl+Mod1+Return exec kitty
-bindsym Mod4+F exec firefox
+bindsym Mod4+F exec flatpak run org.mozilla.firefox
 bindsym Mod4+C exec flatpak run org.chromium.Chromium
 bindsym Mod4+E exec nautilus
 bindsym Mod4+S exec flatpak run com.spotify.Client
@@ -70,19 +70,27 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # Switch to workspace
-bindsym Mod4+1 workspace "1:  Workspace 1 "
-bindsym Mod4+2 workspace "2:  Workspace 2 "
-bindsym Mod4+3 workspace "3:  Workspace 3 "
-bindsym Mod4+4 workspace "4:  Workspace 4 "
+bindsym Mod4+1 workspace "1:  WS 1 "
+bindsym Mod4+2 workspace "2:  WS 2 "
+bindsym Mod4+3 workspace "3:  WS 3 "
+bindsym Mod4+4 workspace "4:  WS 4 "
+bindsym Mod4+5 workspace "5:  WS 5 "
+bindsym Mod4+6 workspace "6:  WS 6 "
+bindsym Mod4+7 workspace "7:  WS 7 "
+bindsym Mod4+8 workspace "8:  WS 8 "
 
 bindsym Ctrl+Mod1+Left workspace prev
 bindsym Ctrl+Mod1+Right workspace next
 
 # Move focused container to workspace
-bindsym Ctrl+Mod1+1 move container to workspace "1:  Workspace 1 "
-bindsym Ctrl+Mod1+2 move container to workspace "2:  Workspace 2 "
-bindsym Ctrl+Mod1+3 move container to workspace "3:  Workspace 3 "
-bindsym Ctrl+Mod1+4 move container to workspace "4:  Workspace 4 "
+bindsym Ctrl+Mod1+1 move container to workspace "1:  WS 1 "
+bindsym Ctrl+Mod1+2 move container to workspace "2:  WS 2 "
+bindsym Ctrl+Mod1+3 move container to workspace "3:  WS 3 "
+bindsym Ctrl+Mod1+4 move container to workspace "4:  WS 4 "
+bindsym Ctrl+Mod1+5 move container to workspace "5:  WS 5 "
+bindsym Ctrl+Mod1+6 move container to workspace "6:  WS 6 "
+bindsym Ctrl+Mod1+7 move container to workspace "7:  WS 7 "
+bindsym Ctrl+Mod1+8 move container to workspace "8:  WS 8 "
 
 # Reload configuration file
 bindsym Ctrl+Mod1+c reload
