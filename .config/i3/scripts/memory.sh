@@ -1,3 +1,3 @@
 #!/bin/bash
 
-free -m | grep Mem | awk '{print $3 " MiB"}'
+free --mega | grep Mem | awk '{print $2 - $7 " MB"}'
