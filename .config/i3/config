@@ -7,8 +7,8 @@ set $defaultmod Mod4
 font pango:NotoSans Nerd Font Regular 9
 
 ## Autostart
-exec_always --no-startup-id pkill picom; picom --experimental-backends -b --config .config/picom/picom.conf
-exec_always --no-startup-id feh --bg-fill Pictures/wp2.jpg
+exec_always --no-startup-id pkill picom; picom --experimental-backends -b --config ~/.config/picom/picom.conf
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wp2.jpg
 exec_always --no-startup-id /usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1
 
 ## Keybindings
@@ -70,27 +70,31 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # Switch to workspace
-bindsym Mod4+1 workspace "1:  WS 1 "
-bindsym Mod4+2 workspace "2:  WS 2 "
-bindsym Mod4+3 workspace "3:  WS 3 "
-bindsym Mod4+4 workspace "4:  WS 4 "
-bindsym Mod4+5 workspace "5:  WS 5 "
-bindsym Mod4+6 workspace "6:  WS 6 "
-bindsym Mod4+7 workspace "7:  WS 7 "
-bindsym Mod4+8 workspace "8:  WS 8 "
+bindsym Mod4+1 workspace "1: 1 "
+bindsym Mod4+2 workspace "2: 2 "
+bindsym Mod4+3 workspace "3: 3 "
+bindsym Mod4+4 workspace "4: 4 "
+bindsym Mod4+5 workspace "5: 5 "
+bindsym Mod4+6 workspace "6: 6 "
+bindsym Mod4+7 workspace "7: 7 "
+bindsym Mod4+8 workspace "8: 8 "
+bindsym Mod4+9 workspace "9: 9 "
+bindsym Mod4+0 workspace "10: 10 "
 
 bindsym Ctrl+Mod1+Left workspace prev
 bindsym Ctrl+Mod1+Right workspace next
 
 # Move focused container to workspace
-bindsym Ctrl+Mod1+1 move container to workspace "1:  WS 1 "
-bindsym Ctrl+Mod1+2 move container to workspace "2:  WS 2 "
-bindsym Ctrl+Mod1+3 move container to workspace "3:  WS 3 "
-bindsym Ctrl+Mod1+4 move container to workspace "4:  WS 4 "
-bindsym Ctrl+Mod1+5 move container to workspace "5:  WS 5 "
-bindsym Ctrl+Mod1+6 move container to workspace "6:  WS 6 "
-bindsym Ctrl+Mod1+7 move container to workspace "7:  WS 7 "
-bindsym Ctrl+Mod1+8 move container to workspace "8:  WS 8 "
+bindsym Ctrl+Mod1+1 move container to workspace "1: 1 "
+bindsym Ctrl+Mod1+2 move container to workspace "2: 2 "
+bindsym Ctrl+Mod1+3 move container to workspace "3: 3 "
+bindsym Ctrl+Mod1+4 move container to workspace "4: 4 "
+bindsym Ctrl+Mod1+5 move container to workspace "5: 5 "
+bindsym Ctrl+Mod1+6 move container to workspace "6: 6 "
+bindsym Ctrl+Mod1+7 move container to workspace "7: 7 "
+bindsym Ctrl+Mod1+8 move container to workspace "8: 8 "
+bindsym Ctrl+Mod1+9 move container to workspace "9: 9 "
+bindsym Ctrl+Mod1+0 move container to workspace "10: 10 "
 
 # Reload configuration file
 bindsym Ctrl+Mod1+c reload
@@ -117,8 +121,8 @@ bindsym Mod4+r mode "resize"
 ## i3bar
 bar {
 	i3bar_command i3bar --transparency
-	#status_command i3status -c .config/i3/i3status/config
-	status_command i3blocks -c .config/i3/i3blocks/config
+	#status_command i3status -c ~/.config/i3/i3status/config
+	status_command i3blocks -c ~/.config/i3/i3blocks/config
 	separator_symbol " | "
 	position top	
 	tray_output none
