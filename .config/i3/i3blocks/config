@@ -1,7 +1,7 @@
 # i3blocks config file
 
 # Global properties
-command=.config/i3/scripts/$BLOCK_NAME.sh
+command=~/.config/i3/scripts/$BLOCK_NAME.sh
 color=#FFFFFF
 separator_block_width=20
 markup=none
