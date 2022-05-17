@@ -8,7 +8,7 @@ markup=none
 
 [spotify]
 label= 
-interval=5
+interval=persist
 
 [memory]
 label=RAM:
