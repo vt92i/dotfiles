@@ -56,7 +56,7 @@ scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprev
 
 cursor-click = pointer
-cursor-scroll = pointer
+cursor-scroll = default
 
 separator = "|"
 
