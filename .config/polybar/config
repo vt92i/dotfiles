@@ -16,7 +16,7 @@ background = #66000000
 background-alt = #66484848
 
 foreground = #CCffffff
-foreground-alt = #30ffffff
+foreground-alt = #73ffffff
 
 primary = #CCffb52a
 
@@ -57,6 +57,8 @@ scroll-down = bspwm-deskprev
 
 cursor-click = pointer
 cursor-scroll = pointer
+
+separator = "|"
 
 [module/bspwm]
 type = internal/bspwm
