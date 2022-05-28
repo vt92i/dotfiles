@@ -1,0 +1,97 @@
+## sxhkd
+# Reload sxhkd
+ctrl + alt + c
+	pkill -USR1 -x sxhkd
+
+## bspwm
+# Restart bspwm
+ctrl + alt + r
+	bspc wm -r
+
+# Quit bspwm
+ctrl + alt + Delete
+	bspc quit
+
+# Kill focused window
+alt + q
+	bspc node -k
+
+# Switch to workspace
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+# Prev or next workspace
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev,next}
+
+# Move focused window to workspace
+ctrl + alt + {1-9,0}
+	set id (bspc query --nodes --node); bspc node -d '^{1-9,10}'; bspc node -f {$id}
+
+# Move focused window to prev or next workspace
+ctrl + shift + alt + {Left,Right}
+	set id (bspc query --nodes --node); bspc node -d {prev,next}; bspc node -f {$id}
+
+# Fullscreen
+alt + Return
+	bspc node -t \~fullscreen
+
+# Change focus
+alt + {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+
+# Toggle tiling or floating
+alt + button3
+	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Rofi
+alt + F2
+	rofi -show drun
+alt + Tab
+	rofi -show window
+
+# Screenshot
+Print
+	flameshot full -p ~/Pictures/Screenshots
+
+# Copy screenshot to clipboard
+ctrl + Print
+	flameshot full -c
+
+# Flameshot GUI
+shift + Print
+	flameshot gui
+	
+# Brightness control
+XF86MonBrightnessUp
+	xbacklight -inc 10
+XF86MonBrightnessDown
+	xbacklight -dec 10
+
+# Volume control
+XF86AudioRaiseVolume
+	amixer -D pulse sset Master 5%+
+XF86AudioLowerVolume
+	amixer -D pulse sset Master 5%-
+
+# Media keys
+XF86Audio{Prev,Next}
+	playerctl {previous,next}
+XF86AudioPlay
+	playerctl play-pause
+
+# Launch apps
+ctrl + alt + Return
+	kitty
+super + f
+	flatpak run org.mozilla.firefox
+super + c
+	flatpak run org.chromium.Chromium
+super + s
+	flatpak run com.spotify.Client
+super + e
+	nautilus
+super + v
+	code-oss
+super + a
+	atom
