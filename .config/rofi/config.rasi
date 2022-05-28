@@ -34,7 +34,7 @@ element {
 
 element selected {
 	text-color: @fg;
-	background-color: #00000073;
+	background-color: #000000B3;
 }
 
 element-text {
