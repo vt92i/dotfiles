@@ -126,7 +126,7 @@ label =  %date%
 type = internal/date
 interval = 5
 time = %l:%M %p
-label =  %time%
+label = %time%
 
 [settings]
 screenchange-reload = true
