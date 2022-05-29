@@ -63,8 +63,9 @@ separator = "|"
 [module/bspwm]
 type = internal/bspwm
 
+label-dimmed-focused-background = ${colors.background}
 label-dimmed-foreground = ${colors.foreground-alt}
-label-dimmed-focused-background = #f00
+label-dimmed-underline = ${colors.background}
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
@@ -72,11 +73,11 @@ label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = %index%
-label-occupied-padding = 2
 label-occupied-foreground = ${colors.foreground-alt}
+label-occupied-padding = 2
 
 label-urgent = %index%!
-label-urgent-background = ${colors.background-alt}
+label-urgent-background = ${colors.background}
 label-urgent-padding = 2
 
 label-empty = %index%
