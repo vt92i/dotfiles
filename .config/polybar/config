@@ -41,6 +41,10 @@ module-margin-left = 2
 module-margin-right = 2
 
 font-0 = NotoSans Nerd Font:weight=regular:size=9;2
+font-1 = Noto Sans JP:weight=regular:size=9;2
+font-2 = Noto Sans KR:weight=regular:size=9;2
+font-3 = Noto Sans TC:weight=regular:size=9;2
+font-4 = Noto Sans SC:weight=regular:size=9;2
 
 modules-left = bspwm xwindow
 modules-right = memory wlan battery pulseaudio date time 
@@ -86,8 +90,7 @@ label-empty-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
-label = %title%
-label-maxlen = 110
+label = %title:0:50:...%
 
 [module/memory]
 type = internal/memory
