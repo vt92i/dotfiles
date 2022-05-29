@@ -12,9 +12,9 @@ ctrl + alt + r
 ctrl + alt + Delete
 	bspc quit
 
-# Kill focused window
+# Close focused window
 alt + q
-	bspc node -k
+	bspc node -c
 
 # Switch to workspace
 super + {1-9,0}
