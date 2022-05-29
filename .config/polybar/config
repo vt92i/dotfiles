@@ -13,12 +13,12 @@
 
 [colors]
 background = #66000000
-background-alt = #66484848
+background-alt = #1A000000
 
-foreground = #CCffffff
-foreground-alt = #73ffffff
+foreground = #FFffffff
+foreground-alt = #80ffffff
 
-primary = #CCffb52a
+primary = #FFffb52a
 
 [bar/main]
 width = 100%
@@ -135,7 +135,7 @@ label =  %date%
 type = internal/date
 interval = 5
 time = %l:%M %p
-label = %time%
+label =  %time%
 
 [settings]
 screenchange-reload = true
