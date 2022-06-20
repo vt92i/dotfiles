@@ -4,7 +4,7 @@ configuration {
 	drun-display-format: "{name} {icon}";
 	window-format: "{w} | {t}";
 	show-icons: true;
-	font: "Noto Sans Regular 9";
+	font: "Iosevka Regular 12";
 	modi: [drun,window];
 }
 
