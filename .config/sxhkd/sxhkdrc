@@ -64,9 +64,9 @@ shift + Print
 	
 # Brightness control
 XF86MonBrightnessUp
-	xbacklight -inc 10
+	brightnessctl set +10%
 XF86MonBrightnessDown
-	xbacklight -dec 10
+	brightnessctl set 10%-
 
 # Volume control
 XF86AudioRaiseVolume
@@ -84,14 +84,14 @@ XF86AudioPlay
 ctrl + alt + Return
 	kitty
 super + f
-	flatpak run org.mozilla.firefox
+	firefox
 super + c
-	flatpak run org.chromium.Chromium
+	google-chrome-stable
 super + s
-	flatpak run com.spotify.Client
+	spotify
 super + e
 	nautilus
 super + v
-	code-oss
-super + a
-	atom
+	code
+super + d
+	discord
