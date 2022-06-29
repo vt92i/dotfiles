@@ -64,15 +64,17 @@ shift + Print
 	
 # Brightness control
 XF86MonBrightnessUp
-	brightnessctl set +10%
+	brillo -A 10 -q
 XF86MonBrightnessDown
-	brightnessctl set 10%-
+	brillo -U 10 -q
 
 # Volume control
 XF86AudioRaiseVolume
 	amixer -D pulse sset Master 5%+
 XF86AudioLowerVolume
 	amixer -D pulse sset Master 5%-
+XF86AudioMute
+	amixer -D pulse sset Master toggle
 
 # Media keys
 XF86Audio{Prev,Next}
