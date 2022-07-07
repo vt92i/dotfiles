@@ -91,7 +91,7 @@ label-empty-padding = 2
 [module/xwindow4]
 type = custom/script
 tail = true
-exec = xtitle
+exec = xtitle -s
 label = %output:0:50:...%
 
 [module/memory]
