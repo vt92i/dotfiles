@@ -126,6 +126,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 label-volume = volume: %percentage%%
 label-muted = volume: muted
+click-right = pavucontrol
 
 [module/date]
 type = internal/date
